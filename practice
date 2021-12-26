@@ -1,0 +1,6 @@
+1 [django-admin startproject config .]으로 config 생성
+## .은 현재 디렉터리를 의미
+
+2 settings.py에서 지역 및 날짜 수정(일단 스킵)
+
+3 메인 urls.py에서 서치의 url 매핑
