@@ -1,0 +1,46 @@
+<html lang="ko">
+{% load static %}
+<head>
+    <title>aram.gg</title>
+    <style>
+      body {
+        height: 100vh;
+        background-image: url("{% static 'bg2.jpg' %}");
+        background-repeat : no-repeat;
+        background-size : cover;
+      }
+
+      img.card-img-top {
+       width:280px;
+       height:280px;
+       opacity:0.8;
+      }
+
+      h {
+        font-size:100px;
+        position: absolute;
+        top:30%;
+        left:38%;
+
+      }
+    </style>
+</head>
+<body>
+</div>
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+<h3><b>{{ kw }}</b></h3>
+
+    {% for champion in Champions1 %}
+        <!-- 부트스트랩 카드 사용 https://getbootstrap.com/docs/4.3/components/card/ -->
+        <div class="card" style="width: 18rem;">
+            <a href="http://127.0.0.1:8000/video/1/"><img class="card-img-top" src="{% static 'garen.png' %}"></a>
+            <div class="card-body">
+            <h4 class="card-text">{{champion.name}}</h4>
+            <p class="card-text">{{champion.job}}</p>
+            </div>
+        </div>
+        {% empty %}
+           <h4>결과 없음</h4>
+    {% endfor %}
+</body>
+</html>

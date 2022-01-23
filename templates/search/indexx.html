@@ -1,0 +1,58 @@
+<html lang="ko">
+{% load static %}
+<head>
+    <title>aram.gg</title>
+    <style>
+
+      div.card {
+        top:70%;
+        left:40%;
+      }
+      body {
+        height: 100vh;
+        background-image: url("{% static 'bg2.jpg' %}");
+        background-repeat : no-repeat;
+        background-size : cover;
+      }
+      div.containor {
+        position: absolute;
+        top:50%;
+        left:40%;
+      }
+      h {
+        font-size:100px;
+        position: absolute;
+        top:30%;
+        left:38%;
+      }
+    </style>
+</head>
+<body>
+<div>
+    <h class="text-light">aram.gg</h>
+</div>
+<div class="containor">
+  <form class="form-inline" action="{% url 'search:search' %}" method="get">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" name="kw">
+    <button class="btn btn-success" type="submit">챔피언 검색</button>
+  </form>
+</div>
+<h3><b>{{ kw }}</b></h3>
+
+    {% for champion in Champions1 %}
+        <!-- 부트스트랩 카드 사용 https://getbootstrap.com/docs/4.3/components/card/ -->
+        <div class="card" style="width: 12rem;" >
+            <div class="card-body">
+            <a href="http://127.0.0.1:8000/video/{{champion.number}}/">
+            <h4 class="card-text">{{champion.name}}</h4>
+            </a>
+            <p class="card-text">{{champion.job}}</p>
+            </div>
+        </div>
+        <p>rr</p>
+        {% empty %}
+           <h4>결과 없음</h4>
+    {% endfor %}
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+</body>
+</html>

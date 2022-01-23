@@ -3,4 +3,31 @@
 
 2 settings.py에서 지역 및 날짜 수정(일단 스킵)
 
-3 메인 urls.py에서 서치의 url 매핑
+3 search앱 시작
+startapp search > 일단 세팅에서 search.app.SearchConfig 추가해  앱 등록 > 메인 urls.py에서 서치의 url 매핑
+
+## search의 urlspy 생성 및 뷰의 인덱스함수 연결
+## 마이그레이션 > migrate(모델 변경마다 해줘야함) : models.py에 적용된 내역을 db에 적용
+
+3-1 serach 모델 생성
+
+## models.Model로 상속받고
+## __str__메소드로 모델 인자의 문자열을 저장해서 출력
+## 마이그레이션 makemigrations로 파일 생성 > migrate로 파일 적용 > showmigrations로 현황확인
+
+4 mkdir 템플릿 생성 후 세팅에서 템플릿 dir 추가
+
+5 view.py에서 html을 렌더해줄 함수를 정의
+
+6 urls.py에서 view.py의 함수를 연결
+
+@ 인덱스페이지에 검색을하면 해당 링크가 이미지형태 버튼으로 출력되고 해당 버튼을 누르먄 해당 페이지로 로드
+#! view에서 index함수 정의시 html주소를 정확히 표시하지 않아 에러
+
+7. 비디오페이지 생성 > 비디오를 admin.py에 추가해서 어드민에서 관리
+
+## urls는 인클루드로 하위 urls에 양도하려면 상위 config urls에 먼저 작성
+#! {{ champion.title }}에서 중괄호 하나 빼먹으면 champion title명만 출력
+
+8. indexx 테이블 수정
+

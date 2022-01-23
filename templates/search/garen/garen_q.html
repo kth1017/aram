@@ -1,0 +1,13 @@
+{% load embed_video_tags %}
+{% for post in posts %}
+<div>
+    <div>
+        <p>{{ post.title }}</p>
+        <p>{{ post.content }}</p>
+        <div> {% video post.video as youtube %}
+            <iframe class="embed-responsive-item" src="{{ youtube.url }}" frameborder="0" allowfullscreen></iframe>
+            {% endvideo %}
+        </div>
+    </div>
+</div>
+{% endfor %}

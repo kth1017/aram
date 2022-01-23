@@ -1,0 +1,65 @@
+{% load static %}
+<html>
+<head>
+    <title>가렌</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'garen.png' %}">
+<style>
+    table {
+       background-color: hsla(205, 100%, 90%, 0.5);
+       margin : 10px 10px 0px 50px;
+    }
+    body {
+        height: 100vh;
+        background-image: url("{% static 'bg2.jpg' %}");
+        background-repeat : no-repeat;
+        background-size : cover;
+    }
+    video {
+        width : 300px;
+        height : 200px;
+    }
+    h1 {
+    margin : 10px 10px 0px 710px;
+    color : white;
+    }
+    button {
+     margin : 10px 10px 0px 10px;
+    }
+    #player {
+    width : 400px;
+    height : 200px;
+    )
+
+
+</style>
+</head>
+<body>
+<img src="{% static 'garen.png' %}" style="margin:30px 10px 0px 200px"</th>
+<img src="{% static 'skill1.png' %}" width=50% hight="50%" style="margin:30px 10px 0px 100px">
+<div style="margin:50px">
+<p><button type="button" class="btn btn-primary" active>소환사스펠 사용</button></p><p><button type="button" class="btn btn-primary" disabled>소환사스펠 미사용</button></p>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr align="center">
+          <td><button type="button" class="btn-light"><img src="{% static 'garen w.png' %}"> <img id="1" src="{% static 'garen r.png' %}"> <img src="{% static 'garen q.png' %}"></button</td>
+          <td><button type="button" class="btn-light"><img src="{% static 'garen q.png' %}"> <img src="{% static 'garen w.png' %}"> <img src="{% static 'garen r.png' %}"></button></td>
+          <td><button type="button" class="btn-light"><img src="{% static 'garen q.png' %}"> <img src="{% static 'garen w.png' %}"> <img src="{% static 'garen r.png' %}"></button></td>
+        </tr>
+        <tr>
+          <td><video id="a" src="{% static 'garen.mp4' %}" controls style="margin:30px 10px 0px 10px"></video></td>
+          <td><video id="a" src="{% static 'garen.mp4' %}" controls style="margin:30px 10px 0px 10px"></video></td>
+          <td><video id="a" src="{% static 'garen.mp4' %}" controls style="margin:30px 10px 0px 10px"></video></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+</body>
+</html>

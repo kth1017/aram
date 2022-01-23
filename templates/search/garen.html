@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Blog List</title>
+    </head>
+    <body>
+
+            {% load static %}
+            <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+            <div class="container">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <td>번호</td>
+                        <td><B>콤보</B></td>
+                        <td>조작</td>
+                        <td>난이도</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td> {{ forloop.counter }}</td>
+                        <td><a href="http://127.0.0.1:8000/video/1/">딜링1</a></td>
+                        <td> q - e - r </td>
+                        <td> 기초 </td>
+                    </tr>
+                    <!-- 여기까지 -->
+                    <tbody>
+                </table>
+    </body>
+</html>

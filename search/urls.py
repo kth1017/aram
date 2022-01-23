@@ -1,7 +1,12 @@
 from django.urls import path
 
-from . import views
+from .views import *
 
-urlpatterns = [
-    path('', views.index),
+app_name='search'
+
+urlpatterns=[
+    path('',indexx, name='search'),
+    path('blog/',blog),
+    path('garen/',garen),
+    path('ashe/',ashe),
 ]
