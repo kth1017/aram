@@ -20,4 +20,4 @@ def video_new(request):
 
 def video_detail(request, video_id):
     video = Video.objects.get(id=video_id)
-    return render(request, 'video/video_detail.html', {'video': video})
+    return render(request, 'video/video_garen.html', {'video': video})

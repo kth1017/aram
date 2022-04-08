@@ -31,3 +31,5 @@ startapp search > 일단 세팅에서 search.app.SearchConfig 추가해  앱 등
 
 8. indexx 테이블 수정
 
+9. 챔피언 리스트가 세로로 되어 display 속성을 추가하여 가로 정렬
+
